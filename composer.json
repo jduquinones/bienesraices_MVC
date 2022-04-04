@@ -1,0 +1,21 @@
+{
+    "name": "pasante/bienesraices_inicio",
+    "description": "Creando un proyecto con POO",
+    "type": "proyect",
+    "autoload": {
+        "psr-4": {
+            "Model\\" : "./models",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jose Trabajo",
+            "email": "eduardoqm23@hotmail.com"
+        }
+    ],
+    "require": {
+        "intervention/image": "^2.7"
+    }
+}

@@ -70,7 +70,7 @@ class PropiedadController{
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
            
-            $args = $_POST['propiedad'];
+            $args = $_POST['propiedad'];  
 
             $propiedad->sincronizar($args);
             $errores = $propiedad->validar();

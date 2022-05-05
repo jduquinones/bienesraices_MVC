@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     eventListeners();
-    darkMode();
+    darkMode(); 
 
 });
 
@@ -38,19 +38,21 @@ function darkMode() {
 function eventListeners(){
     const mobileMenu = document.querySelector('.mobile-menu');
 
-    mobileMenu.addEventListener('click', navegacionResponsive);    
+    mobileMenu.addEventListener('click', navegacionResponsive);
+    
+    // Muestra campos condicionales
+    const metodoContacto = document.querySelectorAll('input[name="contacto[contacto]"]');
+    // La funcion y el forEach nos quita el error al pasar varios elementos al evento listener
+   
+    metodoContacto.forEach(input => input.addEventListener('click', mostrarMetodosContacto));
 }
 
 function navegacionResponsive(){
     const navegacion = document.querySelector('.navegacion');
     
-    navegacion.classList.toggle('mostrar'); // hace los mismo que el if que esta abajo
-
-    // if(navegacion.classList.contains('mostrar')) {        
-    //     navegacion.classList.remove('mostrar');
-    // }else {
-    //     navegacion.classList.add('mostrar');
-    // }
+    navegacion.classList.toggle('mostrar');
 }
 
-
+function mostrarMetodosContacto(){
+    console.log('Seleccionado');
+}
